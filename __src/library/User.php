@@ -27,13 +27,13 @@ class User
 	 * @param array $data
 	 *
 	 * @return array
-	 * @throws InvalidArgument
-	 * @throws InvalidData
+	 * @throws Exception\InvalidArgument
+	 * @throws Exception\InvalidData
 	 */
 	public function GetUsers(array $data)
 	{
 		if (empty($data)) {
-			throw new InvalidArgument('Empty data provided');
+			throw new Exception\InvalidArgument('Empty data provided');
 		}
 
 		$list = [];
@@ -53,18 +53,18 @@ class User
 	 *
 	 * @param array $record
 	 *
-	 * @throws InvalidData
+	 * @throws Exception\InvalidData
 	 */
 	public function ValidateUser(array $record)
 	{
 		if (!isset($record[self::USER_ID])) {
-			throw new InvalidData('User ID is missing');
+			throw new Exception\InvalidData('User ID is missing');
 		} else if (!isset($record[self::NAME])) {
-			throw new InvalidData('User Name is missing');
+			throw new Exception\InvalidData('User Name is missing');
 		} else if (!isset($record[self::LATITUDE])) {
-			throw new InvalidData('User Latitude is missing');
+			throw new Exception\InvalidData('User Latitude is missing');
 		} else if (!isset($record[self::LONGITUDE])) {
-			throw new InvalidData('User Longitude is missing');
+			throw new Exception\InvalidData('User Longitude is missing');
 		}
 	}
 }

@@ -32,7 +32,7 @@ class Invitee
 	 * @param array $destination
 	 * @param int   $maxDistanceInKM
 	 *
-	 * @throws InvalidArgument
+	 * @throws Exception\InvalidArgument
 	 */
 	public function __construct(array $users, array $destination, int $maxDistanceInKM)
 	{
@@ -48,12 +48,12 @@ class Invitee
 	 * @param array $users
 	 *
 	 * @return self
-	 * @throws InvalidArgument
+	 * @throws Exception\InvalidArgument
 	 */
 	protected function SetUsers(array $users)
 	{
 		if (empty($users)) {
-			throw new InvalidArgument('User list can not be empty');
+			throw new Exception\InvalidArgument('User list can not be empty');
 		}
 
 		$this->users = $users;
@@ -67,7 +67,7 @@ class Invitee
 	 * @author Madhur Tandon
 	 *
 	 * @return array
-	 * @throws InvalidArgument
+	 * @throws Exception\InvalidArgument
 	 */
 	public function GetInvitees()
 	{

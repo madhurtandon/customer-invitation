@@ -6,7 +6,10 @@
  * @author         Madhur Tandon
  */
 
-namespace App\Library;
+namespace App\Library\Parser;
+
+
+use App\Library\Exception;
 
 
 /**
@@ -24,7 +27,7 @@ class File implements IParser
 	 *
 	 * @param string $filePath
 	 *
-	 * @throws FileNotFound
+	 * @throws Exception\FileNotFound
 	 */
 	public function __construct(string $filePath)
 	{
@@ -37,12 +40,12 @@ class File implements IParser
 	 * @param string $filePath
 	 *
 	 * @return self
-	 * @throws FileNotFound
+	 * @throws Exception\FileNotFound
 	 */
 	protected function SetFilePath(string $filePath)
 	{
 		if (!file_exists($filePath)) {
-			throw new FileNotFound;
+			throw new Exception\FileNotFound();
 		}
 
 		$this->filePath = $filePath;

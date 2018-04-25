@@ -6,7 +6,7 @@
  * @author         Madhur Tandon
  */
 
-namespace App\Library;
+namespace App\Library\Parser;
 
 
 /**

@@ -7,7 +7,10 @@
  */
 
 
-namespace App\Library;
+namespace App\Library\Exception;
+
+
+use App\Library\Exception;
 
 
 /**

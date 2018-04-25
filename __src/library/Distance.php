@@ -40,7 +40,7 @@ class Distance
 	 * @param array $origin
 	 * @param array $destination
 	 *
-	 * @throws InvalidArgument
+	 * @throws Exception\InvalidArgument
 	 */
 	public function __construct(array $origin, array $destination)
 	{
@@ -54,12 +54,12 @@ class Distance
 	 * @param array $origin
 	 *
 	 * @return self
-	 * @throws InvalidArgument
+	 * @throws Exception\InvalidArgument
 	 */
 	protected function SetOrigin(array $origin)
 	{
 		if (!isset($origin[self::LATITUDE]) || !isset($origin[self::LONGITUDE])) {
-			throw new InvalidArgument('Origin is missing with the latitude and longitude');
+			throw new Exception\InvalidArgument('Origin is missing with the latitude and longitude');
 		}
 
 		$this->originLatitude  = $origin[self::LATITUDE];
@@ -74,12 +74,12 @@ class Distance
 	 * @param array $destination
 	 *
 	 * @return self
-	 * @throws InvalidArgument
+	 * @throws Exception\InvalidArgument
 	 */
 	protected function SetDestination(array $destination)
 	{
 		if (!isset($destination[self::LATITUDE]) || !isset($destination[self::LONGITUDE])) {
-			throw new InvalidArgument('Destination is missing with the latitude and longitude');
+			throw new Exception\InvalidArgument('Destination is missing with the latitude and longitude');
 		}
 
 		$this->destinationLatitude  = $destination[self::LATITUDE];

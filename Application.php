@@ -10,9 +10,9 @@ namespace App;
 
 
 use App\Library\User;
-use App\Library\File;
 use App\Library\Invitee;
 use App\Library\Distance;
+use App\Library\Parser\File;
 
 
 /**
