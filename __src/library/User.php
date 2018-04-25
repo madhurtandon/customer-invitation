@@ -28,7 +28,7 @@ class User
 	 *
 	 * @return array
 	 */
-	public function GetFormattedList(array $data)
+	public function GetUsers(array $data)
 	{
 		$list = [];
 		foreach ($data as $record) {
