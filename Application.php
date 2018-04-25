@@ -62,7 +62,7 @@ class Application
 
 		foreach ($invitees as $inviteeID => $invitee) {
 			echo 'User ' . $inviteeID . ' ' . $invitee . ' is with in the range of ' . self::MAX_DISTANCE_IN_KM . ' KM';
-			echo "\n";
+			echo PHP_SAPI === 'cli' ? PHP_EOL : "<BR/>";
 		}
 
 		return;
