@@ -25,7 +25,7 @@ class Application
 	const MAX_DISTANCE_IN_KM = 100;
 
 	/**
-	 * This method retrieve retrieve the formatted list of customer and print the invitees which are with in 100KM
+	 * This method retrieve the formatted list of customer and print the invitees which are with in range of 100KM
 	 *
 	 * @author Madhur Tandon
 	 */
@@ -50,6 +50,8 @@ class Application
 
 	/**
 	 * Print the list of invitees
+	 *
+	 * @author Madhur Tandon
 	 *
 	 * @param array $invitees
 	 */
